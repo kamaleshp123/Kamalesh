@@ -1,0 +1,11 @@
+diff --git a/f1.c b/f1.c
+index fcafef5..66c2faa 100644
+--- a/f1.c
++++ b/f1.c
+@@ -6,6 +6,5 @@ int main()
+   
+  system("i>>f.txt");
+ printf("88888888kamalesh/////\n");
+-printf("88888888kamalesh/////\n");
+ 
+ }

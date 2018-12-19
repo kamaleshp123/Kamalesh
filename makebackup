@@ -1,0 +1,33 @@
+feq ($k, y)
+  2 #c: 
+  3 # echo "#define TEST 5">>h.h  
+  4 #else
+  5 #d: 
+  6 # echo "#define TEST 10">>h.h 
+  7 #endif
+  8 
+  9 #out : condn_cmpl.o 
+ 10 #         cc -o out condn_cmpl.o 
+ 11 #condn_cmpl.o : condn_cmpl.c
+ 12 #ifeq ($k, y)
+ 13 #out:condn_cmpl.c
+ 14 #         cc -c condn_cmpl.c -o #out
+ 15 #condn_cmpl.o:      
+ 16 #         echo "#define TEST 5">>h.h
+ 17 #         cc -o out condn_cmpl.o 
+ 18 #else
+ 19 #d: 
+ 20 # echo "#define TEST 10">>h.h   
+ 21 # cc -c condn_cmpl.c
+ 22 ##ndif
+ 23 
+ 24 $TEST ?= n
+ 25 ifeq($(TEST), y)
+ 26 all:
+ 27   gcc -D$(TEST) condn_cmpl.c -o test
+ 28 else
+ 29 all:
+ 30   gcc -D$(TEST) condn_cmpl.c -o test
+ 31 #endif
+ 32 
+`

@@ -1,0 +1,13 @@
+ /* Test cases of array/*
+
+1. i/p arr[]={1,2,3}
+	size	no of rtn 	result	     
+	3	1		2,3,1
+	3	2		3,1,2
+	3	3		1,2,3
+	3	5		3,1,2
+	0       6               ----- 
+	3	-1 		ERROR" Enter positive no."
+arr[-1,-2,-3]	
+	3	1		-2,-1,-3
+	0	0		ERROR
