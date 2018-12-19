@@ -18,7 +18,7 @@ main()
   arr[0].s.b=100;
   t *ptr;
   ptr=arr;
-
+puts("kamalesh patil\n");
   printf(" a=%d",ptr[0].s.b);
 
 ptr[0].s.a=89;
